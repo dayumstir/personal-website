@@ -3,19 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-icons": "^4.11.0",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "autoprefixer": "latest",
     "postcss": "latest",
+    "prettier": "3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
     "tailwindcss": "latest"
   }
 }
