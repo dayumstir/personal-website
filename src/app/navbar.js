@@ -3,25 +3,36 @@
 import { LuCircleDot, LuCircle } from "react-icons/lu";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { useEffect } from "react";
 
 export default function NavBar() {
-  const [selected, setSelected] = useState("About");
+  const [selected, setSelected] = useState("about");
 
-  const sections = ["About", "Experience", "Projects", "Resume"];
+  useEffect(() => {
+    const options = {
+      threshold: 0.55,
+    };
 
-  const handleClick = (section) => {
-    setSelected(section);
-  };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setSelected(entry.target.id);
+        }
+      });
+    }, options);
+
+    const sections = document.querySelectorAll("section");
+    sections.forEach((sect) => observer.observe(sect));
+  }, []);
 
   const NavIcon = ({ section }) => {
-    const isSelected = section === selected;
+    const isSelected = section.toLowerCase() === selected;
 
     return (
       <div
         className={`flex w-full cursor-pointer justify-end gap-2 ${
           !isSelected ? "opacity-50" : ""
         }`}
-        onClick={() => handleClick(section)}
       >
         {section}
         {isSelected ? <LuCircleDot size={24} /> : <LuCircle size={24} />}
@@ -40,3 +51,5 @@ export default function NavBar() {
     </nav>
   );
 }
+
+const sections = ["About", "Experience", "Projects", "Resume"];
