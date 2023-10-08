@@ -4,6 +4,7 @@ export default function About() {
       id="about"
       className="flex h-screen flex-col justify-center"
       data-aos="zoom-in"
+      data-aos-duration="1000"
     >
       <p className="text-3xl font-bold">Hi, my name is </p>
 

@@ -1,33 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-
-const list = [
-  {
-    company: "SISTIC Singapore",
-    role: "Product Engineer Intern",
-    date: "May 2023 - Present",
-    description:
-      "Helped with this  Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this",
-    techstack: ["React", "Javascript", "Material UI", "SCSS", "REST APIs"],
-  },
-  {
-    company: "National University of Singapore",
-    role: "Teaching Assistant",
-    date: "Aug 2023 - Present",
-    description: "Helped with this",
-    techstack: ["Java"],
-  },
-  {
-    company: "NUS Computing Club",
-    role: "Director of Partnerships (Student Life)",
-    date: "Aug 2022 - Jul 2023",
-    description: "Helped with this",
-    techstack: ["React", "Express.js"],
-  },
-];
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Experience() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   useEffect(() => {
     const handleOnMouseMove = (e) => {
       const { currentTarget: target } = e;
@@ -53,21 +34,25 @@ export default function Experience() {
   }, []);
 
   const Exp = ({ data }) => {
-    const { company, role, date, description, techstack } = data;
+    const { company, role, date, desc, tech } = data;
 
     return (
-      <div className="hover-effect relative flex max-w-xl rounded-xl bg-[#282D33] p-8">
+      <div
+        className="hover-effect relative flex max-w-xl rounded-xl bg-[#282D33] p-8"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
         <div className="flex min-w-[170px] justify-end pr-8 pt-0.5 text-sm font-light text-slate-400">
           {date}
         </div>
         <div className="flex flex-col gap-2">
-          <div className="text-">{company}</div>
-          <div className="">{role}</div>
-          <div className="text-sm text-slate-400">{description}</div>
+          <div className="font-semibold">{company}</div>
+          <div className="font-semibold">{role}</div>
+          <div className="text-sm text-slate-400">{desc}</div>
           <div className="flex flex-wrap gap-2 pt-4">
-            {techstack.map((tech) => {
+            {tech.map((tech) => {
               return (
-                <div className="min-w-fit rounded-3xl border-2 border-secondary px-3 py-1 text-sm text-secondary">
+                <div className="rounded-3xl border-2 border-secondary px-3 py-1 text-sm text-secondary">
                   {tech}
                 </div>
               );
@@ -88,10 +73,27 @@ export default function Experience() {
       </div>
 
       <div className="max-w-l flex flex-col gap-8">
-        {list.map((data) => {
-          return <Exp data={data} />;
+        {list.map((exp) => {
+          return <Exp data={exp} />;
         })}
       </div>
     </section>
   );
 }
+
+const list = [
+  {
+    company: "SISTIC Singapore",
+    role: "Product Engineer Intern",
+    date: "May 2023 - Present",
+    desc: "Helped with this  Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this",
+    tech: ["React", "Javascript", "REST APIs", "Material UI", "SCSS"],
+  },
+  {
+    company: "National University of Singapore",
+    role: "Teaching Assistant",
+    date: "Aug 2023 - Present",
+    desc: "Helped with this",
+    tech: ["Java"],
+  },
+];

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Socials from "./socials";
 import About from "./about";
 import NavBar from "./navbar";
@@ -17,10 +16,9 @@ export default function Home() {
       <Experience />
       <Projects />
       <Resume />
-      <footer className="max-w-lg py-8 text-slate-400">
-        Loosely designed in Figma and coded in Visual Studio Code by yours
-        truly. Built with Next.js and Tailwind CSS, deployed with Vercel. All
-        text is set in the Inter typeface.
+      <footer className="max-w-xs py-8 text-xs text-slate-400">
+        This website was built using Next.js and Tailwind CSS. Deployed with
+        Vercel. Loosely designed in Figma.
       </footer>
     </main>
   );
