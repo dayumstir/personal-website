@@ -4,12 +4,34 @@
 
 :root {
   --text: #ffffff;
-  --background: #292f36;
+  --background: #21262c;
   --primary: #4ecdc4;
-  --secondary: #9DC7C5;
+  --secondary: #9dc7c5;
 }
 
 body {
   color: var(--text);
   background-color: var(--background);
+}
+
+.hover-effect::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  position: absolute;
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.hover-effect:hover::before {
+  opacity: 1;
 }
