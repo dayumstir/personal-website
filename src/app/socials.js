@@ -8,7 +8,7 @@ const links = {
 
 export default function Socials() {
   return (
-    <socials className="fixed bottom-0 left-16 flex flex-col items-center gap-8">
+    <socials className="flex items-center gap-8 sm:fixed sm:bottom-0 sm:left-16 sm:flex-col">
       <a href={links.github} target="_blank">
         <LuGithub
           size={24}
@@ -27,7 +27,7 @@ export default function Socials() {
           className="cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:stroke-primary"
         />
       </a>
-      <vertical className="h-32 border-l-2 border-white" />
+      <vertical className="hidden h-32 border-l-2 border-white sm:block" />
     </socials>
   );
 }

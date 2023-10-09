@@ -42,7 +42,7 @@ export default function Experience() {
         data-aos="zoom-in"
         data-aos-duration="1000"
       >
-        <div className="flex min-w-[170px] justify-end pr-8 pt-0.5 text-sm font-light text-slate-400">
+        <div className="flex min-w-[100px] justify-end pr-8 pt-0.5 text-sm font-light text-slate-400 sm:min-w-[170px]">
           {date}
         </div>
         <div className="flex flex-col gap-2">
@@ -66,13 +66,13 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="flex min-h-screen max-w-xl flex-col justify-center"
+      className="flex min-h-screen max-w-sm flex-col justify-center sm:max-w-xl"
     >
-      <div className="w-full py-8 text-5xl font-semibold text-primary">
+      <div className="w-full py-8 text-4xl font-semibold text-primary sm:text-5xl">
         Experience
       </div>
 
-      <div className="max-w-l flex flex-col gap-8">
+      <div className="flex flex-col gap-8">
         {list.map((exp) => {
           return <Exp data={exp} />;
         })}
@@ -86,14 +86,14 @@ const list = [
     company: "SISTIC Singapore",
     role: "Product Engineer Intern",
     date: "May 2023 - Present",
-    desc: "Helped with this  Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this Helped with this",
+    desc: " Facilitated the revamp of the company portal and implemented new features such as an events visit planner and fixed numerous bugs. Automated processes to boost operational efficiency by aggregating real time data into a pivot table.",
     tech: ["React", "Javascript", "REST APIs", "Material UI", "SCSS"],
   },
   {
     company: "National University of Singapore",
     role: "Teaching Assistant",
     date: "Aug 2023 - Present",
-    desc: "Helped with this",
+    desc: "Lead weekly tutorial sessions for 14 students, enhancing their grasp of Java Fundamentals. Developed and taught classes on problem-solving methodologies, algorithm design, testing, debugging, programming constructs, data structures, sorting, and recursion",
     tech: ["Java"],
   },
 ];

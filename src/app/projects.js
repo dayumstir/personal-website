@@ -34,15 +34,16 @@ export default function Projects() {
       </a>
     );
   };
+
   return (
     <section
       id="projects"
-      className="flex h-screen flex-col items-end justify-center"
+      className="flex min-h-screen flex-col justify-center"
     >
-      <div className="w-full py-8 text-left text-right text-5xl font-semibold text-primary">
+      <div className="w-full pb-8 pt-16 text-right text-4xl font-semibold text-primary sm:pt-8 sm:text-5xl">
         Projects
       </div>
-      <div className="grid max-w-3xl grid-cols-3 gap-4">
+      <div className="grid max-w-sm grid-rows-3 gap-4 sm:max-w-3xl sm:grid-cols-3 sm:grid-rows-1">
         {list.map((proj) => (
           <Proj data={proj} />
         ))}
@@ -54,7 +55,7 @@ export default function Projects() {
 const list = [
   {
     name: "Infinite Carpool",
-    desc: "A web application that connects employees within a company, facilitating easy coordination and group formation for carpooling.",
+    desc: "A web application that connects employees within a company, facilitating easy coordination and group formation for carpooling. Placed Top 4 at LifeHack 2023.",
     tech: ["React", "Javascript", "CSS", "Firebase"],
     img: "/infinite-carpool-icon.png",
     link: "https://github.com/adityajirafe/InfiniteIteratorsLifeHack",
