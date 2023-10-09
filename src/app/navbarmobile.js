@@ -38,7 +38,7 @@ export default function NavBarMobile() {
         scrollDirection === "down" ? "-top-20" : "top-0"
       } z-10 h-20 w-screen bg-[#21262c] duration-300 sm:hidden`}
     >
-      <div className="absolute left-7 top-7 font-semibold">
+      <div className="absolute left-7 top-7 font-semibold text-lg">
         Dempster 🧑🏻‍💻
       </div>
       <LuMenu
