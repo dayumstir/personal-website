@@ -38,7 +38,7 @@ export default function Experience() {
 
     return (
       <div
-        className="hover-effect relative flex max-w-xl rounded-xl bg-[#282D33] p-8"
+        className="hover-effect relative flex rounded-xl bg-[#282D33] p-8"
         data-aos="zoom-in"
         data-aos-duration="1000"
       >
@@ -66,7 +66,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="flex min-h-screen flex-col justify-center"
+      className="flex min-h-screen max-w-xl flex-col justify-center"
     >
       <div className="w-full py-8 text-5xl font-semibold text-primary">
         Experience

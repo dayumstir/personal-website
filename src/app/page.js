@@ -16,7 +16,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Resume />
-      <footer className="max-w-xs py-8 text-xs text-slate-400">
+      <footer className="max-w-xs py-8 text-xs text-slate-400 text-center">
         This website was built using Next.js and Tailwind CSS. Deployed with
         Vercel. Loosely designed in Figma.
       </footer>
