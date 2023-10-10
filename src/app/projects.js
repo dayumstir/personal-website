@@ -38,9 +38,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex min-h-screen flex-col justify-center"
+      className="flex min-h-screen flex-col justify-center px-3"
     >
-      <div className="w-full pb-8 pt-16 text-right text-4xl font-semibold text-primary sm:pt-8 sm:text-5xl">
+      <div className="w-full pb-8 pt-24 text-right text-4xl font-semibold text-primary sm:pt-8 sm:text-5xl">
         Projects
       </div>
       <div className="grid max-w-sm grid-rows-3 gap-4 sm:max-w-3xl sm:grid-cols-3 sm:grid-rows-1">

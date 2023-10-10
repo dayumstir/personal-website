@@ -58,7 +58,7 @@ export default function NavBarMobile() {
         />
         <div className="flex cursor-pointer flex-col items-center gap-5">
           {sections.map((sect) => (
-            <Link to={sect.toLowerCase()} smooth={true} duration={500}>
+            <Link to={sect.toLowerCase()} smooth={true} duration={500} onClick={handleClick}>
               <p className="text-xl transition-all duration-300 hover:text-primary">
                 {sect}
               </p>

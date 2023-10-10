@@ -66,7 +66,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="flex min-h-screen max-w-sm flex-col justify-center sm:max-w-xl"
+      className="flex min-h-screen max-w-sm flex-col justify-center px-3 sm:max-w-xl"
     >
       <div className="w-full py-8 text-4xl font-semibold text-primary sm:text-5xl">
         Experience
