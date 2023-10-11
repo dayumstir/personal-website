@@ -36,9 +36,9 @@ export default function NavBarMobile() {
     <nav
       className={`sticky ${
         scrollDirection === "down" ? "-top-20" : "top-0"
-      } z-10 h-20 w-screen bg-[#21262c] duration-300 sm:hidden`}
+      } z-10 h-20 w-screen border-b border-b-secondary bg-[#21262c] duration-300 sm:hidden`}
     >
-      <div className="absolute left-7 top-7 font-semibold text-lg">
+      <div className="absolute left-7 top-7 text-lg font-semibold">
         Dempster 🧑🏻‍💻
       </div>
       <LuMenu
@@ -58,7 +58,12 @@ export default function NavBarMobile() {
         />
         <div className="flex cursor-pointer flex-col items-center gap-5">
           {sections.map((sect) => (
-            <Link to={sect.toLowerCase()} smooth={true} duration={500} onClick={handleClick}>
+            <Link
+              to={sect.toLowerCase()}
+              smooth={true}
+              duration={500}
+              onClick={handleClick}
+            >
               <p className="text-xl transition-all duration-300 hover:text-primary">
                 {sect}
               </p>
