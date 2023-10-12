@@ -8,7 +8,6 @@ import Resume from "./resume";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center">
-      <div className="fixed left-16 top-8 hidden text-3xl sm:block">🧑🏻‍💻</div>
       <NavBar />
       <NavBarMobile />
       <About />

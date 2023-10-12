@@ -42,6 +42,11 @@ export default function NavBar() {
 
   return (
     <nav className="fixed right-16 top-0 hidden flex-col items-end gap-8 sm:flex">
+      <Link to={"about"} smooth={true} duration={500}>
+        <div className="fixed left-16 top-8 hidden cursor-pointer text-3xl sm:block">
+          🧑🏻‍💻
+        </div>
+      </Link>
       <vertical className="hidden h-32 border-l-2 border-white pr-3 sm:block" />
       {sections.map((sect) => (
         <Link to={sect.toLowerCase()} smooth={true} duration={500}>
