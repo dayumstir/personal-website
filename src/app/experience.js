@@ -86,14 +86,14 @@ const list = [
     company: "SISTIC Singapore",
     role: "Product Engineer Intern",
     date: "May 2023 - Present",
-    desc: " Facilitated the revamp of the company portal and implemented new features such as an events visit planner and fixed numerous bugs. Automated processes to boost operational efficiency by aggregating real time data into a pivot table.",
+    desc: " Facilitated the revamp of the company portal and implemented new features such as an events visit planner and fixed numerous bugs. Automated processes to boost operational efficiency by aggregating real-time data into a pivot table.",
     tech: ["React", "Javascript", "REST APIs", "Material UI", "SCSS"],
   },
   {
     company: "National University of Singapore",
     role: "Teaching Assistant",
     date: "Aug 2023 - Present",
-    desc: "Lead weekly tutorial sessions for 14 students, enhancing their grasp of Java Fundamentals. Developed and taught classes on problem-solving methodologies, algorithm design, testing, debugging, programming constructs, data structures, sorting, and recursion",
+    desc: "Lead weekly tutorial sessions for 14 students, enhancing their grasp of Java Fundamentals. Devised and taught classes on problem-solving methodologies, algorithm design, testing, debugging, programming constructs, data structures, sorting, and recursion.",
     tech: ["Java"],
   },
 ];

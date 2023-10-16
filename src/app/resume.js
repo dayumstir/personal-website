@@ -15,7 +15,7 @@ export default function Resume() {
         </div>
 
         <div className="glow-effect transition-duration-300 mx-auto mt-12 max-w-max cursor-pointer rounded-full bg-primary px-8 py-4 font-semibold text-black transition-all">
-          <a href="/dempster-resume.pdf" target="_blank">
+          <a href="/Dempster_Resume.pdf" target="_blank">
             View My Resume
           </a>
         </div>

@@ -55,21 +55,21 @@ export default function Projects() {
 const list = [
   {
     name: "Infinite Carpool",
-    desc: "A web application that connects employees within a company, facilitating easy coordination and group formation for carpooling. Placed Top 4 at LifeHack 2023.",
+    desc: "A web application that connects employees within a company, facilitating easy group formation for carpooling, and determines the shortest travel path to the office. Attained Top 4 at LifeHack 2023.",
     tech: ["React", "Javascript", "CSS", "Firebase"],
     img: "/infinite-carpool-icon.png",
     link: "https://github.com/adityajirafe/InfiniteIteratorsLifeHack",
   },
   {
     name: "flash!",
-    desc: "A rock climbing social media mobile application for climbers to post videos of their rock climbing betas (instructions), follow other users, like and comment on posts.",
+    desc: "A rock climbing social media mobile application for climbers to post videos of their rock climbing betas (instructions), follow other users, and also like and comment on other users' posts.",
     tech: ["React Native", "CSS", "Firebase", "Jest"],
     img: "/flash-icon.png",
     link: "https://github.com/dayumstir/flash",
   },
   {
     name: "eVenn",
-    desc: "A social media event finder web application for students to easily post, discover, comment, and indicate attendance to events.",
+    desc: "A social media event finder web application for students to easily post, discover, comment, and indicate attendance to school events.",
     tech: ["Java", "PrimeFaces", "Glassfish", "MySQL"],
     img: "/evenn-icon.png",
     link: "https://github.com/springljy/eVenn",
