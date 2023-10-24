@@ -30,9 +30,8 @@ export default function NavBar() {
 
     return (
       <div
-        className={`flex w-full cursor-pointer justify-end gap-2 transition-all duration-300 hover:opacity-100 ${
-          !isSelected ? "opacity-50" : ""
-        } `}
+        className={`flex w-full cursor-pointer justify-end gap-2 transition-all duration-300 hover:opacity-100 
+        ${!isSelected && "opacity-50"}`}
       >
         {section}
         {isSelected ? <LuCircleDot size={24} /> : <LuCircle size={24} />}
