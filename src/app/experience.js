@@ -42,7 +42,7 @@ export default function Experience() {
         data-aos="zoom-in"
         data-aos-duration="1000"
       >
-        <div className="flex min-w-[100px] justify-end pr-8 pt-0.5 text-sm font-light text-slate-400 sm:min-w-[170px]">
+        <div className="flex min-w-[110px] justify-end pr-8 pt-0.5 text-sm font-light text-slate-400 sm:min-w-[180px]">
           {date}
         </div>
         <div className="flex flex-col gap-2">
