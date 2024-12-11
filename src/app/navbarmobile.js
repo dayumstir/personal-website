@@ -36,36 +36,37 @@ export default function NavBarMobile() {
     <nav
       className={`sticky ${
         scrollDirection === "down" ? "-top-20" : "top-0"
-      } z-10 h-20 w-screen border-b border-b-secondary bg-[#21262c] duration-300 sm:hidden`}
+      } z-10 h-20 w-screen border-b border-b-secondary bg-neutral-900 duration-300 sm:hidden`}
     >
-      <div className="absolute left-7 top-7 text-lg font-semibold">
+      <div className="absolute left-7 top-7 text-lg font-semibold text-gray-300">
         Dempster 🧑🏻‍💻
       </div>
       <LuMenu
         size={30}
-        className="absolute right-7 top-7 cursor-pointer"
+        className="absolute right-7 top-7 cursor-pointer text-gray-300"
         onClick={handleClick}
       />
       <div
-        className={`fixed top-0 z-50 flex h-screen w-9/12 flex-col items-center justify-center gap-3 bg-[#2c323a] duration-300 ${
+        className={`fixed top-0 z-50 flex h-screen w-9/12 flex-col items-center justify-center gap-3 bg-neutral-900 duration-300 ${
           isOpen ? "right-0" : "-right-3/4"
         }`}
       >
         <LuX
           size={30}
-          className="absolute right-8 top-8 cursor-pointer"
+          className="absolute right-8 top-8 cursor-pointer text-gray-300"
           onClick={handleClick}
         />
         <div className="flex cursor-pointer flex-col items-center gap-5">
-          {sections.map((sect) => (
+          {sections.map((section) => (
             <Link
-              to={sect.toLowerCase()}
+              key={section}
+              to={section.toLowerCase()}
               smooth={true}
               duration={500}
               onClick={handleClick}
             >
-              <p className="text-xl transition-all duration-300 hover:text-primary">
-                {sect}
+              <p className="text-xl text-gray-300 transition-all duration-300 hover:text-primary">
+                {section}
               </p>
             </Link>
           ))}

@@ -30,8 +30,8 @@ export default function NavBar() {
 
     return (
       <div
-        className={`flex w-full cursor-pointer justify-end gap-2 transition-all duration-300 hover:opacity-100 
-        ${!isSelected && "opacity-50"}`}
+        className={`flex w-full cursor-pointer justify-end gap-2 text-gray-400 transition-all duration-300 hover:opacity-100 
+        ${!isSelected ? "opacity-50" : "opacity-100"}`}
       >
         {section}
         {isSelected ? <LuCircleDot size={24} /> : <LuCircle size={24} />}
@@ -40,16 +40,21 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="fixed right-16 top-0 -mt-8 hidden flex-col items-end gap-8 sm:flex">
+    <nav className="fixed right-16 top-0 z-10 -mt-8 hidden flex-col items-end gap-8 sm:flex">
       <Link to={"about"} smooth={true} duration={500}>
         <div className="fixed left-16 top-8 hidden cursor-pointer text-3xl sm:block">
           🧑🏻‍💻
         </div>
       </Link>
-      <vertical className="hidden h-32 border-l-2 border-white pr-3 sm:block" />
-      {sections.map((sect) => (
-        <Link to={sect.toLowerCase()} smooth={true} duration={500}>
-          <NavIcon section={sect} />
+      <vertical className="hidden h-32 border-l-2 border-gray-400 pr-3 sm:block" />
+      {sections.map((section) => (
+        <Link
+          key={section}
+          to={section.toLowerCase()}
+          smooth={true}
+          duration={500}
+        >
+          <NavIcon section={section} />
         </Link>
       ))}
     </nav>

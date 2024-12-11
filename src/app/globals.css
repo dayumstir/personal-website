@@ -4,9 +4,19 @@
 
 :root {
   --text: #ffffff;
-  --background: #21262c;
+  --background: #000000;
   --primary: #4ecdc4;
   --secondary: #9dc7c5;
+  --conic-gradient: conic-gradient(
+    #ff2e2e,
+    #ff831e,
+    #fcff51,
+    #58ff57,
+    #575fff,
+    #d257ff,
+    #ff57e5,
+    #ff1556
+  );
 }
 
 body {
@@ -16,8 +26,10 @@ body {
 
 .hover-effect::before {
   background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
+    /* --mouse-x and --mouse-y CSS variables are set dynamically via JavaScript in experience.js 
+       based on mouse movement over elements with the hover-effect class */
+      800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.1),
     transparent 40%
   );
   position: absolute;
@@ -37,5 +49,54 @@ body {
 }
 
 .glow-effect:hover {
-  box-shadow: 0 20px 80px -10px var(--primary);
+  box-shadow: 0 0 100px 5px var(--primary);
+}
+
+.rainbow-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.rainbow-button:hover::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 350%;
+  background: var(--conic-gradient);
+}
+
+.rainbow-button::after {
+  content: "View Resume";
+  position: absolute;
+  background-color: #ffffff;
+  width: 96%;
+  height: 90%;
+  border-radius: 100px;
+
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rainbow-button:hover {
+  transform: scale(1.1);
+}
+
+.rainbow-button:hover::before {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

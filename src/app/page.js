@@ -5,6 +5,7 @@ import About from "./about";
 import Experience from "./experience";
 import Projects from "./projects";
 import Resume from "./resume";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center">

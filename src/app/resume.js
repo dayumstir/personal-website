@@ -4,21 +4,23 @@ export default function Resume() {
       id="resume"
       className="flex h-screen max-w-sm flex-col items-center justify-center px-6 sm:max-w-xl"
     >
-      <div className="w-full py-8 text-4xl font-semibold text-primary sm:text-5xl">
+      <h1 className="w-full bg-gradient-to-b from-neutral-100 to-neutral-500 bg-clip-text py-8 text-4xl font-semibold text-transparent sm:text-5xl">
         Resume
-      </div>
+      </h1>
       <div data-aos="zoom-in" data-aos-duration="1000">
-        <div className="sm:text-lg">
+        <div className="text-gray-400">
           Feel free to take a look at my resume and reach out if you like what
-          you see! Looking for new internship positions and opportunities to
-          learn and grow. 😊
+          you see! Looking for new entry-level full time positions and
+          opportunities to learn and grow. 😊
         </div>
 
-        <div className="glow-effect transition-duration-300 mx-auto mt-12 max-w-max cursor-pointer rounded-full bg-primary px-8 py-4 font-semibold text-black transition-all">
-          <a href="/Dempster_Resume.pdf" target="_blank">
-            View My Resume
-          </a>
-        </div>
+        <a
+          className="rainbow-button transition-duration-300 mx-auto mt-12 max-w-max cursor-pointer rounded-full px-8 py-4 font-semibold text-gray-800 transition-all active:scale-95"
+          href="/Dempster_Resume.pdf"
+          target="_blank"
+        >
+          View Resume
+        </a>
       </div>
     </section>
   );
