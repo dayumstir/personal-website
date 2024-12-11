@@ -12,19 +12,19 @@ export default function Socials() {
       <a href={links.github} target="_blank">
         <LuGithub
           size={24}
-          className="cursor-pointer transition-all duration-300 hover:-translate-y-1"
+          className="cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:text-white"
         />
       </a>
       <a href={links.linkedin} target="_blank">
         <LuLinkedin
           size={24}
-          className="cursor-pointer transition-all duration-300 hover:-translate-y-1"
+          className="cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:text-white"
         />
       </a>
       <a href={links.email} target="_blank">
         <LuMail
           size={24}
-          className="cursor-pointer transition-all duration-300 hover:-translate-y-1"
+          className="cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:text-white"
         />
       </a>
       <vertical className="hidden h-32 border-l-2 border-gray-400 sm:block" />

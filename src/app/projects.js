@@ -15,7 +15,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="group rounded-lg border border-teal-800/40 p-6 backdrop-blur-sm transition-colors hover:border-teal-500/30"
+            className="group rounded-lg border border-teal-600/40 p-6 backdrop-blur-sm transition-colors hover:border-teal-400/40"
             whileHover={{
               scale: 1.02,
               transition: { type: "spring", stiffness: 300, damping: 10 },

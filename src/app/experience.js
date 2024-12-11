@@ -50,7 +50,7 @@ export default function Experience() {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="hover-effect rounded-lg border border-violet-800/40 p-8 backdrop-blur-sm transition-colors hover:border-violet-600/40"
+                className="hover-effect rounded-lg border border-violet-600/40 p-8 backdrop-blur-sm transition-colors hover:border-violet-400/40"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
               >

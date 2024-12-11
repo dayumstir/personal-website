@@ -29,7 +29,7 @@ body {
     /* --mouse-x and --mouse-y CSS variables are set dynamically via JavaScript in experience.js 
        based on mouse movement over elements with the hover-effect class */
       800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.15),
     transparent 40%
   );
   position: absolute;
