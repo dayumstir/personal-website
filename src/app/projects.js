@@ -20,9 +20,8 @@ export default function Projects() {
               scale: 1.02,
               transition: { type: "spring", stiffness: 300, damping: 10 },
             }}
-            style={{
-              opacity: 1,
-            }}
+            data-aos="zoom-in"
+            data-aos-duration="1000"
           >
             <div className="mb-4 flex items-start justify-between">
               <div className="flex items-center gap-3">
