@@ -110,7 +110,7 @@ const experiences = [
     role: "Teaching Assistant",
     date: "Aug 2023 - Nov 2023",
     description:
-      "Conducted weekly tutorial sessions for 14 students, enhancing grasp of Java fundamentals. Devised and taught classes on problem-solving methodologies, data structures and algorithms, sorting, recursion,testing and debugging.",
+      "Conducted weekly tutorial sessions for 14 students, enhancing grasp of Java fundamentals. Devised and taught classes on problem-solving methodologies, data structures and algorithms, sorting, recursion, testing and debugging.",
     tech: ["Java"],
   },
 ];
