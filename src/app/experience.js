@@ -1,15 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Badge } from "@/components/badge";
+import { motion } from "framer-motion";
 
 export default function Experience() {
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
-
   // Hover effect for the cards
   useEffect(() => {
     const handleOnMouseMove = (e) => {
@@ -35,6 +30,20 @@ export default function Experience() {
     };
   }, []);
 
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <section
       id="experience"
@@ -48,11 +57,13 @@ export default function Experience() {
         {
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="hover-effect rounded-lg border border-violet-600/40 p-8 backdrop-blur-sm transition-colors hover:border-violet-400/40"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.6 }}
               >
                 <div className="mb-4 flex flex-col justify-between md:flex-row md:items-center">
                   <div>
@@ -79,7 +90,7 @@ export default function Experience() {
                     </Badge>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         }

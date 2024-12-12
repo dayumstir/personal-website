@@ -5,23 +5,52 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Projects() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <section id="projects" className="relative mx-auto max-w-5xl px-4 py-16">
       <h1 className="w-full bg-gradient-to-r from-teal-200 via-teal-400 to-teal-600  bg-clip-text py-8 text-4xl font-semibold text-transparent sm:text-5xl">
         Projects
       </h1>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
         {projects.map((project, index) => (
           <motion.div
             key={index}
             className="group rounded-lg border border-teal-600/40 p-6 backdrop-blur-sm transition-colors hover:border-teal-400/40"
+            variants={itemVariants}
             whileHover={{
-              scale: 1.02,
+              scale: 1.04,
               transition: { type: "spring", stiffness: 300, damping: 10 },
             }}
-            data-aos="zoom-in"
-            data-aos-duration="1000"
           >
             <div className="mb-4 flex items-start justify-between">
               <div className="flex items-center gap-3">
@@ -64,7 +93,7 @@ export default function Projects() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
