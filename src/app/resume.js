@@ -23,7 +23,7 @@ export default function Resume() {
         </div>
 
         <motion.a
-          className="rainbow-button transition-duration-300 mx-auto mt-12 max-w-max cursor-pointer rounded-full px-8 py-4 font-semibold text-gray-800 transition-all active:scale-95"
+          className="rainbow-button transition-duration-300 mx-auto mt-12 max-w-max rounded-full px-8 py-4 font-semibold text-gray-800 transition-all"
           href="/Dempster_Resume.pdf"
           target="_blank"
           whileHover={{ scale: 1.05 }}

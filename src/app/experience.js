@@ -70,7 +70,7 @@ export default function Experience() {
                     <h3 className="text-xl font-semibold text-violet-100">
                       {exp.company}
                     </h3>
-                    <h4 className="text-lg text-violet-300/80">{exp.title}</h4>
+                    <h4 className="text-lg text-violet-300/80">{exp.role}</h4>
                   </div>
                   <p className="mt-2 text-violet-400/60 md:mt-0">{exp.date}</p>
                 </div>
